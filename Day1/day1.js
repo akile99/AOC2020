@@ -40,19 +40,19 @@ partone = (array) => {
 parttwo = (array) => {
 	let first = 0;
 	let second = 0;
-	let third = 0;
+	let test = 0;
 	array.some(a => {
 		array.some(b => {
 			array.some(c => {
 				if(checkSum(checkSum(a,b),c) === 2020) {
 					first = a;
 					second = b;
-					third = c;
+					test = c;
 				}
 			})
 		})
 	})
-	return multiplyNums(multiplyNums(first,second),third)
+	return multiplyNums(multiplyNums(first,second),test)
 }
 
 	// multiply the two numbers that equal 2020
