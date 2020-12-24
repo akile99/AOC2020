@@ -32,8 +32,4 @@ isPasswordValid = (pass) => {
 	}else {return 0}
 }
 
-function a() {
-	return 4+5
-}
-
 partone(input)
