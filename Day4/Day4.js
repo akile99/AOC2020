@@ -8,6 +8,7 @@ const checkPassports = (file) => {
 	let isValid = 0;
 	// Read file and assign data string to lines
 	fs.readFile(`./${file}`, (err, data) => {
+		console.time('passport');
 		const lines = data.toString().split('\n\n');
 		lines.map((line, i) => {
 			passports.push(getKeys(lines[i]));
@@ -15,7 +16,8 @@ const checkPassports = (file) => {
 		passports.map(p => {
 			isValid += validatePassportPart1(p);
 		})
-		console.log(isValid);
+		console.log(`There are ${isValid} valid passports`);
+		console.timeEnd('passport');
 	})
 }
 
